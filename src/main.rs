@@ -14,4 +14,7 @@
  * limitations under the License.
  */
 
-fn main() {}
+//! A pure Rust implementation of a multilayer perceptron for MNIST handwritten digit recognition,
+//! built entirely from scratch without the use of machine learning frameworks.
+
+const fn main() {}

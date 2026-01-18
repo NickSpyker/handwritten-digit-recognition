@@ -35,7 +35,7 @@ In-depth reading materials that explain the mathematics and theory behind the im
 
 - **[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com)** by [Michael Nielsen](https://michaelnielsen.org)
     - _A comprehensive online book covering the theoretical foundations._
-- **[Chris Olah's Blog](https://colah.github.io/)**
+- **[Christopher Olah's Blog](https://colah.github.io/)**
     - _Excellent articles on neural networks and deep learning concepts._
 
 ### 💻 Code References
