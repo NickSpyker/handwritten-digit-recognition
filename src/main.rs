@@ -17,4 +17,31 @@
 //! A pure Rust implementation of a multilayer perceptron for MNIST handwritten digit recognition,
 //! built entirely from scratch without the use of machine learning frameworks.
 
-const fn main() {}
+mod cli;
+mod core;
+mod gui;
+mod math;
+mod neural_network;
+
+use core::Result;
+use neural_network::MultilayerSingleton;
+use rand::Rng;
+
+fn main() -> Result<()> {
+    let args = cli::Args::parse();
+
+    match args {
+        cli::Args::Train { file } => {
+            let mut rng = rand::rng();
+            let neural_network = MultilayerSingleton::new([2, 3, 1], || rng.random());
+            neural_network.save_to_file(file)?;
+            Ok(())
+        }
+        cli::Args::App { file } => {
+            let mut rng = rand::rng();
+            let neural_network = MultilayerSingleton::new([2, 3, 1], || rng.random());
+            let app = gui::App::new(neural_network);
+            app.run()
+        }
+    }
+}
